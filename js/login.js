@@ -1,6 +1,10 @@
 document.getElementById("login-button").addEventListener('click', function(e){
     e.preventDefault();
-    const mobileNumber = document.getElementById("mobile-number").value;
-    const pinNumber = document.getElementById("pin-number").value
-    console.log(pinNumber, mobileNumber)
+    const pinNumber = document.getElementById("pin-number").value;
+
+    if(pinNumber === "123456"){
+        window.location = "/dashboard.html"
+    }else{
+        alert("wrong pin! the pin number is 123456")
+    }
 })
